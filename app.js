@@ -1,19 +1,36 @@
-var btns = document.querySelectorAll('#girl-list .delete');
+const names = document.querySelector("#girl-list ul");
 
-Array.from(btns).forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
+names.addEventListener("click", function (e) {
+  if (e.target.className == "delete") {
     const li = e.target.parentElement;
-
-    li.parentNode.removeChild(li);
-  });
+    names.removeChild(li);
+  }
 });
 
+//Add Name
 
-//const link = document.querySelector('#page-banner a')
+const addName = document.forms["add-name"];
 
-//link.addEventListener('click', function(e){
-    //e.preventDefault();
-   //console.log('navigation to Facebook', e.target.textContent, 'was prevented')
-//})
+addName.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const value = addName.querySelector('input[type="text"]').value;
+
+  const li = document.createElement("li");
+  const girlName = document.createElement("span");
+  const deletebtn = document.createElement("span");
+
+  deletebtn.textContent ='delete';
+  girlName.textContent= value;
 
 
+  girlName.classList.add('name');
+  deletebtn.classList.add('delete');
+
+
+  li.appendChild(girlName);
+  li.appendChild(deletebtn);
+  names.appendChild(li)
+
+
+});
