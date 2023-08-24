@@ -126,3 +126,26 @@ h2 {
 #add-name label {
   line-height: 52px;
 }
+
+
+#tabbed-content li {
+    display: inline-block;
+    padding: 10px 14px;
+    background:  #b5b1b1;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+#tabbed-content .panel {
+    display: none;
+    border: 1px solid #b5b1b1;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+
+#tabbed-content .panel .active {
+    display: block;
+}
