@@ -9,4 +9,7 @@
 `documents`
  and th `nodeList`
 
- and how to convert them in an array using `forEach`
+ and how to convert them into an array using `forEach`
+
+
+ 
